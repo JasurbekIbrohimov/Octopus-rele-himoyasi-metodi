@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+/* ------------------ */
+.header {
+  background-color: #d9e4ed;
+  width: 100%;
+  height: 76px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 430px;
+  border-bottom: 2px solid #416691;
+}
+.header__logo {
+  padding: 0 30px;
+  margin-left: 30px;
+}
+.logo {
+  width: 55px;
+  height: 55px;
+}
+.header__title {
+  color: #416691;
+}
+
+/*  main */
+.main {
+  width: 100%;
+  display: flex;
+  background-color: #d9e4ed;
+}
+.main__left {
+  width: 20%;
+  height: 88.6vh;
+  border: 1px solid #416691;
+}
+.main__middle {
+  width: 60%;
+  height: 88.6vh;
+  border: 1px solid #416691;
+}
+.main__right {
+  width: 20%;
+  height: 88.6vh;
+  border: 1px solid #416691;
+  padding: 0 0 40px 0;
+  animation: infinite;
+}
+/* ==== navbar ==== */
+.navbar__title {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 28px;
+}
+.navbar__item {
+  padding: 25px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__item a {
+  color: black;
+  font-size: 23px;
+  line-height: 81px;
+  transition: all 0.2s ease-in-out;
+}
+.navbar__item a:hover {
+  color: #416691;
+  transform: scale(1.1);
+}
+.navbar__item a:focus {
+  color: #416691;
+  transform: scale(1.1);
+}
+
+.navbar__item .navbar__item_list1 {
+  animation: anim 7s cubic-bezier(0.2, 0.49, 0.91, 0.67);
+  animation-delay: 1.2s;
+}
+.navbar__item .navbar__item_list2 {
+  animation: anim 7s cubic-bezier(0.2, 0.49, 0.91, 0.67);
+  animation-delay: 2.5s;
+}
+.navbar__item .navbar__item_list3 {
+  animation: anim 7s cubic-bezier(0.2, 0.49, 0.91, 0.67);
+  animation-delay: 4.1s;
+}
+.navbar__item .navbar__item_list4 {
+  animation: anim 7s cubic-bezier(0.2, 0.49, 0.91, 0.67);
+  animation-delay: 5.4s;
+}
+.navbar__item .navbar__item_list5 {
+  animation: anim 7s cubic-bezier(0.2, 0.49, 0.91, 0.67);
+  animation-delay: 6.6s;
+}
+
+/*  animation  */
+@keyframes anim {
+  0%,
+  40%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+    color: #416691;
+  }
+}
+
+/* ==== images ===== */
+
+.images__title {
+  width: 90%;
+  margin: 10px auto;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+}
+.images video {
+  width: 90%;
+  margin: auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== info ==== */
+.info__title {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 26px;
+}
+.info__globl {
+  padding: 10px 12px;
+}
+.info__globl .title {
+  font-size: 22px;
+}
+.info__globl .text {
+  font-size: 15px;
+}
+.info__none {
+  display: none;
+}
+
+/* ========== */
+.info__globl_imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* === btn === */
+.info__btn {
+  transform: translate(80px, 30px);
+  padding: 9px 32px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #416691;
+  font-weight: 700;
+}
+/* ==== modal ==== */
+.modal {
+  display: none;
+  width: 100%;
+  height: 88vh;
+  background-color: rgba(255, 255, 255, 0.534);
+  position: absolute;
+  z-index: 999;
+}
+.modal__inner {
+  width: 90%;
+  height: 570px;
+  margin: 10px auto;
+  background-color: #416691dc;
+  color: #d9e4ed;
+  border: 2px solid #000;
+  overflow-y: scroll;
+  padding: 10px 12px;
+  line-height: 25px;
+}
+.modal__inner_title {
+  position: fixed;
+  padding: 20px 10px;
+  background-color: #416691cb;
+  width: 87%;
+  font-size: 24px;
+}
+.modal__inner_body {
+  margin-top: 60px;
+}
+.modal__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 2rem;
+  top: 14px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.modal__close:hover {
+  transform: rotate(180deg);
+}
+
+/* open & close */
+.open {
+  display: block;
+}
+.close {
+  display: none;
+}
+/*  responsove design web app */
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .header {
+    gap: 235px;
+  }
+  .navbar__title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 22px;
+  }
+  .navbar__item a {
+    color: black;
+    font-size: 18px;
+    line-height: 60px;
+    transition: all 0.2s ease-in-out;
+  }
+  .images__title {
+    width: 85%;
+    margin: 10px auto;
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+
+  .info__title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+  }
+  .info__globl {
+    padding: 10px 5px;
+  }
+}
